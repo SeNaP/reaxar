@@ -14,6 +14,8 @@ Gem::Specification.new do |spec|
   spec.files         = Dir['lib/**/*.rb']
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'async-http'
-  spec.add_dependency 'nokogiri'
+  spec.required_ruby_version = ">= 3.2"
+
+  spec.add_dependency "async-http", "~> 0.89.0"
+  spec.add_dependency "nokogiri", "~> 1.18"
 end

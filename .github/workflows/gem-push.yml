@@ -28,11 +28,8 @@ jobs:
 
     - name: Publish to RubyGems
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      env:
-        RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
       run: |
-        mkdir -p ~/.gem
-        echo "---\n:rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
-        chmod 0600 ~/.gem/credentials
         gem build *.gemspec
-        gem push *.gem
+        GEM_HOST_API_KEY=${{ secrets.RUBYGEMS_API_KEY }} gem push *.gem
+      env:
+        GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}

@@ -6,8 +6,14 @@ Gem::Specification.new do |spec|
   spec.version       = Reaxar::VERSION
   spec.authors       = ['Petr Ustyugov']
   spec.email         = ['peter.ustyugov@gmail.com']
-  spec.summary       = 'Simple HTTP browser with cookie persistence'
-  spec.description   = 'REST client with cookie support and page navigation'
+  spec.summary       = 'Asynchronous Simple HTTP browser'
+  spec.description = <<~DESC
+    Reaxar is a lightweight asynchronous HTTP/REST client for Ruby, built on top of async-http.
+    It features automatic cookie management, support for redirects and relative navigation,
+    and is ideal for scraping, API interaction, or automated web flows.
+
+    Perfect for developers who need a non-blocking HTTP client with session awareness and simple request chaining.
+  DESC
   spec.homepage      = 'https://github.com/senap/reaxar'
   spec.license       = 'MIT'
 

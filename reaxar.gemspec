@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require_relative 'lib/reaxar'
+require_relative 'lib/reaxar/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'reaxar'
